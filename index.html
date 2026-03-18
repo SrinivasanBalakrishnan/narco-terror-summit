@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>International Conference on Countering Narco-Terrorism</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        // Custom Tailwind Configuration for the Think Tank Theme
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        oxford: '#0a192f',
+                        accent: '#1d4ed8', // Professional Blue
+                        highlight: '#b91c1c' // Alert Red
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #f8fafc; color: #0f172a; }
+        .accordion-content { transition: max-height 0.4s ease-in-out; overflow: hidden; max-height: 0; }
+        .accordion-content.open { max-height: 800px; } /* Large enough to fit all text */
+        .rotate-180 { transform: rotate(180deg); }
+        .nav-scrolled { background-color: rgba(10, 25, 47, 0.95); backdrop-filter: blur(10px); }
+    </style>
+</head>
+<body class="antialiased selection:bg-accent selection:text-white">
+
+    <nav id="navbar" class="fixed w-full z-50 bg-oxford border-b border-slate-800 shadow-lg transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <i class="fa-solid fa-shield-halved text-blue-400 text-2xl"></i>
+                <div class="flex flex-col">
+                    <span class="font-bold text-lg leading-tight tracking-wider text-white">INDIC RESEARCHERS FORUM</span>
+                    <span class="text-[10px] text-blue-300 tracking-widest uppercase">Civilisation • Security • Statesmanship</span>
+                </div>
+            </div>
+            <div class="hidden md:flex space-x-8 text-sm font-semibold text-slate-300">
+                <a href="#about" class="hover:text-white transition-colors">Context</a>
+                <a href="#agenda" class="hover:text-white transition-colors">Strategic Agenda</a>
+            </div>
+            <button class="bg-accent hover:bg-blue-600 text-white px-6 py-2 rounded text-sm font-semibold transition-colors shadow-md">
+                Delegate Portal
+            </button>
+        </div>
+    </nav>
+
+    <section class="relative pt-32 pb-20 px-4 bg-white border-b border-slate-200 overflow-hidden">
+        <div class="max-w-5xl mx-auto text-center relative z-10">
+            <div class="inline-flex items-center space-x-2 bg-slate-100 border border-slate-200 rounded-full px-4 py-1.5 mb-8 shadow-sm">
+                <i class="fa-solid fa-globe text-accent"></i>
+                <span class="text-xs font-bold tracking-widest text-oxford uppercase">Global Security Summit 2026</span>
+            </div>
+
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight mb-6 text-oxford">
+                International Conference on <br class="hidden md:block" />
+                <span class="text-accent">Countering Narco-Terrorism</span>
+            </h1>
+
+            <p class="text-lg md:text-xl text-slate-600 mb-10 max-w-3xl mx-auto leading-relaxed">
+                Examining the evolving nexus between global drug cartels, illicit financial flows, and terror financing systems to safeguard global security.
+            </p>
+
+            <div class="flex flex-col md:flex-row items-center justify-center gap-4 mb-10">
+                <div class="flex items-center space-x-2 text-slate-700 font-semibold bg-slate-50 px-6 py-3 rounded-lg border border-slate-200 shadow-sm">
+                    <i class="fa-regular fa-calendar text-accent text-lg"></i>
+                    <span>April 10-11, 2026</span>
+                </div>
+                <div class="flex items-center space-x-2 text-slate-700 font-semibold bg-slate-50 px-6 py-3 rounded-lg border border-slate-200 shadow-sm">
+                    <i class="fa-solid fa-location-dot text-accent text-lg"></i>
+                    <span>Virtual Summit (Google Meet)</span>
+                </div>
+            </div>
+
+            <button class="bg-highlight hover:bg-red-800 text-white px-10 py-4 rounded-lg font-bold tracking-wide transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+                Register as Delegate
+            </button>
+        </div>
+    </section>
+
+    <section id="about" class="py-20 px-4 bg-slate-50 border-b border-slate-200">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <h2 class="text-3xl font-bold text-oxford mb-6 flex items-center gap-3">
+                    <i class="fa-solid fa-book-open text-accent"></i> The Strategic Context
+                </h2>
+                <p class="text-slate-600 mb-4 leading-relaxed text-lg">
+                    The global narcotics trade has evolved into one of the most powerful drivers of transnational crime, increasingly intersecting with terrorism, organized criminal networks, and illicit financial systems.
+                </p>
+                <p class="text-slate-600 leading-relaxed text-lg">
+                    From the Golden Crescent to Latin America, the nexus between narcotics trafficking and terrorism has emerged as a critical challenge for global security, undermining governance and fueling violent conflicts.
+                </p>
+            </div>
+            <div class="bg-white p-10 border border-slate-200 rounded-xl shadow-md relative overflow-hidden">
+                <div class="absolute top-0 left-0 w-1.5 h-full bg-accent"></div>
+                <h3 class="font-bold text-oxford mb-6 text-2xl border-b border-slate-100 pb-4">Organizing Partners</h3>
+                
+                <div class="mb-6">
+                    <p class="text-oxford font-bold text-lg"><i class="fa-solid fa-landmark text-accent mr-2"></i>Indic Researchers Forum</p>
+                    <p class="text-slate-500 text-sm ml-7">Civilisation • Security • Statesmanship</p>
+                </div>
+                
+                <div>
+                    <p class="text-oxford font-bold text-lg"><i class="fa-solid fa-satellite-dish text-accent mr-2"></i>Avellon Intelligence</p>
+                    <p class="text-slate-500 text-sm ml-7">Strategic Risk & Intelligence</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="agenda" class="py-20 px-4 bg-white">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-oxford mb-4">Strategic Agenda</h2>
+                <div class="w-20 h-1.5 bg-accent mx-auto rounded"></div>
+            </div>
+
+            <div class="flex justify-center space-x-4 mb-10 border-b border-slate-200 pb-px">
+                <button id="btn-day1" onclick="switchTab('day1')" class="px-8 py-3 text-lg font-bold transition-all border-b-4 border-accent text-accent">
+                    Day 1 (April 10)
+                </button>
+                <button id="btn-day2" onclick="switchTab('day2')" class="px-8 py-3 text-lg font-bold transition-all border-b-4 border-transparent text-slate-500 hover:text-slate-800">
+                    Day 2 (April 11)
+                </button>
+            </div>
+
+            <div id="day1-content" class="space-y-4 block animate-fade-in">
+                
+                <div class="bg-white border border-slate-200 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between p-6 cursor-pointer" onclick="toggleAccordion('d1-inaugural')">
+                        <div class="flex flex-col md:flex-row md:items-center gap-4">
+                            <div class="flex items-center gap-2 text-accent font-bold text-sm bg-blue-50 px-3 py-1.5 rounded border border-blue-100">
+                                <i class="fa-regular fa-clock"></i> 1:30 PM - 3:00 PM IST
+                            </div>
+                            <h3 class="text-xl font-bold text-oxford">Inaugural Session</h3>
+                        </div>
+                        <i id="icon-d1-inaugural" class="fa-solid fa-chevron-down text-slate-400 transition-transform mt-4 md:mt-0 text-xl"></i>
+                    </div>
+                    <div id="d1-inaugural" class="accordion-content border-t border-slate-100 bg-slate-50">
+                        <div class="p-6 md:pl-[14.5rem]">
+                            <ul class="space-y-3 text-slate-700 font-medium">
+                                <li><i class="fa-solid fa-caret-right text-accent mr-2"></i>1. Keynote Address</li>
+                                <li><i class="fa-solid fa-caret-right text-accent mr-2"></i>2. Keynote Address</li>
+                                <li><i class="fa-solid fa-caret-right text-accent mr-2"></i>3. Chief Guest Address</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white border border-slate-200 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between p-6 cursor-pointer" onclick="toggleAccordion('d1-s1')">
+                        <div class="flex flex-col md:flex-row md:items-center gap-4">
+                            <div class="flex items-center gap-2 text-accent font-bold text-sm bg-blue-50 px-3 py-1.5 rounded border border-blue-100">
+                                <i class="fa-regular fa-clock"></i> 3:00 PM - 5:00 PM IST
+                            </div>
+                            <h3 class="text-xl font-bold text-oxford">Session 1: The Golden Crescent - Drugs, Militancy and Terror Financing</h3>
+                        </div>
+                        <i id="icon-d1-s1" class="fa-solid fa-chevron-down text-slate-400 transition-transform mt-4 md:mt-0 text-xl"></i>
+                    </div>
+                    <div id="d1-s1" class="accordion-content border-t border-slate-100 bg-slate-50">
+                        <div class="p-6 md:pl-[14.5rem]">
+                            <ul class="space-y-3 text-slate-700">
+                                <li><i class="fa-solid fa-caret-right text-accent mr-2"></i>1. The Evolution of Poppy Cultivation and Drug Production in Pak-Afghanistan Region</li>
+                                <li><i class="fa-solid fa-caret-right text-accent mr-2"></i>2. From Fields to Global Markets: Drug Trafficking Routes via Pakistan, Afghanistan and Iran</li>
+                                <li><i class="fa-solid fa-caret-right text-accent mr-2"></i>3. Illicit Financial Flows: Money Laundering, Hawala networks and Organised Crime</li>
+                                <li><i class="fa-solid fa-caret-right text-accent mr-2"></i>4. Golden Crescent and Jihadist Groups: Understanding the Narcotics-Terror nexus</li>
+                                <li><i class="fa-solid fa-caret-right text-accent mr-2"></i>5. Impact on India's Internal Security: Kashmir-Punjab Militancy</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white border border-slate-200 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between p-6 cursor-pointer" onclick="toggleAccordion('d1-s2')">
+                        <div class="flex flex-col md:flex-row md:items-center gap-4">
+                            <div class="flex items-center gap-2 text-accent font-bold text-sm bg-blue-50 px-3 py-1.5 rounded border border-blue-100">
+                                <i class="fa-regular fa-clock"></i> 5:30 PM - 7:30 PM IST
+                            </div>
+                            <h3 class="text-xl font-bold text-oxford">Session 2: The Andean Cocaine Complex: Production, Insurgency and Global Supply</h3>
+                        </div>
+                        <i id="icon-d1-s2" class="fa-solid fa-chevron-down text-slate-400 transition-transform mt-4 md:mt-0 text-xl"></i>
+                    </div>
+                    <div id="d1-s2" class="accordion-content border-t border-slate-100 bg-slate-50">
+                        <div class="p-6 md:pl-[14.5rem]">
+                            <ul class="space-y-3 text-slate-700">
+                                <li><i class="fa-solid fa-caret-right text-accent mr-2"></i>1. The Historical evolution of Cocaine Production in Andean Region</li>
+                                <li><i class="fa-solid fa-caret-right text-accent mr-2"></i>2. Cartel Structure: Governance, evolving political dynamics and Syndicate</li>
+                                <li><i class="fa-solid fa-caret-right text-accent mr-2"></i>3. From Andes to Global Markets: Trafficking Routes and Transnational Networks</li>
+                                <li><i class="fa-solid fa-caret-right text-accent mr-2"></i>4. Illicit Financial Network, Shell Structures and Money Laundering</li>
+                                <li><i class="fa-solid fa-caret-right text-accent mr-2"></i>5. Counter-Narcotics Policies in the Andes: Successes, Failures and Lessons</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white border border-slate-200 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between p-6 cursor-pointer" onclick="toggleAccordion('d1-s3')">
+                        <div class="flex flex-col md:flex-row md:items-center gap-4">
+                            <div class="flex items-center gap-2 text-accent font-bold text-sm bg-blue-50 px-3 py-1.5 rounded border border-blue-100">
+                                <i class="fa-regular fa-clock"></i> 7:30 PM - 9:30 PM IST
+                            </div>
+                            <h3 class="text-xl font-bold text-oxford">Session 3: Mexico: Cartels, Synthetic Drug Revolution and Globalization</h3>
+                        </div>
+                        <i id="icon-d1-s3" class="fa-solid fa-chevron-down text-slate-400 transition-transform mt-4 md:mt-0 text-xl"></i>
+                    </div>
+                    <div id="d1-s3" class="accordion-content border-t border-slate-100 bg-slate-50">
+                        <div class="p-6 md:pl-[14.5rem]">
+                            <ul class="space-y-3 text-slate-700">
+                                <li><i class="fa-solid fa-caret-right text-accent mr-2"></i>1. The Rise of Synthetic Drugs: Methamphetamine, Fentanyl and the New Economy</li>
+                                <li><i class="fa-solid fa-caret-right text-accent mr-2"></i>2. Cartels in Mexico: Parallel State, Violence and Power Struggle</li>
+                                <li><i class="fa-solid fa-caret-right text-accent mr-2"></i>3. Transnational Criminal Network in Europe, Asia and Beyond</li>
+                                <li><i class="fa-solid fa-caret-right text-accent mr-2"></i>4. From Mexico to Global Markets: Understanding the Drug Trafficking Routes</li>
+                                <li><i class="fa-solid fa-caret-right text-accent mr-2"></i>5. Understanding US Approach to Counter Narco-Terrorism from Mexico</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="day2-content" class="space-y-4 hidden animate-fade-in">
+                
+                <div class="bg-white border border-slate-200 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between p-6 cursor-pointer" onclick="toggleAccordion('d2-s4')">
+                        <div class="flex flex-col md:flex-row md:items-center gap-4">
+                            <div class="flex items-center gap-2 text-accent font-bold text-sm bg-blue-50 px-3 py-1.5 rounded border border-blue-100">
+                                <i class="fa-regular fa-clock"></i> 1:00 PM - 3:00 PM IST
+                            </div>
+                            <h3 class="text-xl font-bold text-oxford">Session 4: The Golden Triangle: Opium, Synthetic Drug Expansion</h3>
+                        </div>
+                        <i id="icon-d2-s4" class="fa-solid fa-chevron-down text-slate-400 transition-transform mt-4 md:mt-0 text-xl"></i>
+                    </div>
+                    <div id="d2-s4" class="accordion-content border-t border-slate-100 bg-slate-50">
+                        <div class="p-6 md:pl-[14.5rem]">
+                            <ul class="space-y-3 text-slate-700">
+                                <li><i class="fa-solid fa-caret-right text-accent mr-2"></i>1. Historical evolution of Poppy Cultivation in the Golden Triangle</li>
+                                <li><i class="fa-solid fa-caret-right text-accent mr-2"></i>2. The Emergence of Methamphetamine: Production and Governance</li>
+                                <li><i class="fa-solid fa-caret-right text-accent mr-2"></i>3. The Golden Triangle, Cross Border Trafficking Routes and Networks</li>
+                                <li><i class="fa-solid fa-caret-right text-accent mr-2"></i>4. Conflict Economies in Myanmar: Ethnic Armed Groups and Civil War</li>
+                                <li><i class="fa-solid fa-caret-right text-accent mr-2"></i>5. Organised Crime groups, money laundering and regional security</li>
+                                <li><i class="fa-solid fa-caret-right text-accent mr-2"></i>6. India's Internal Security: Evolving security dynamics in India's northeast</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white border border-slate-200 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between p-6 cursor-pointer" onclick="toggleAccordion('d2-s5')">
+                        <div class="flex flex-col md:flex-row md:items-center gap-4">
+                            <div class="flex items-center gap-2 text-accent font-bold text-sm bg-blue-50 px-3 py-1.5 rounded border border-blue-100">
+                                <i class="fa-regular fa-clock"></i> 3:00 PM - 5:00 PM IST
+                            </div>
+                            <h3 class="text-xl font-bold text-oxford">Session 5: Emerging Narcotics Challenges in India</h3>
+                        </div>
+                        <i id="icon-d2-s5" class="fa-solid fa-chevron-down text-slate-400 transition-transform mt-4 md:mt-0 text-xl"></i>
+                    </div>
+                    <div id="d2-s5" class="accordion-content border-t border-slate-100 bg-slate-50">
+                        <div class="p-6 md:pl-[14.5rem]">
+                            <ul class="space-y-3 text-slate-700">
+                                <li><i class="fa-solid fa-caret-right text-accent mr-2"></i>1. Illicit Drugs, Borders and insurgency in Punjab and Kashmir</li>
+                                <li><i class="fa-solid fa-caret-right text-accent mr-2"></i>2. Illicit Drugs, Borders and insurgency in northeast</li>
+                                <li><i class="fa-solid fa-caret-right text-accent mr-2"></i>3. Pharma, Precursor Chemicals and Synthetic Drugs in India</li>
+                                <li><i class="fa-solid fa-caret-right text-accent mr-2"></i>4. Darknet, Crypto and the challenge of online Drug Trafficking</li>
+                                <li><i class="fa-solid fa-caret-right text-accent mr-2"></i>5. Ports, Shipping and Illicit Trade: Trafficking Through Maritime Gateways</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white border border-slate-200 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between p-6 cursor-pointer" onclick="toggleAccordion('d2-s6')">
+                        <div class="flex flex-col md:flex-row md:items-center gap-4">
+                            <div class="flex items-center gap-2 text-accent font-bold text-sm bg-blue-50 px-3 py-1.5 rounded border border-blue-100">
+                                <i class="fa-regular fa-clock"></i> 5:30 PM - 7:30 PM IST
+                            </div>
+                            <h3 class="text-xl font-bold text-oxford">Session 6: Combating Narcotics Terror - Global Strategies</h3>
+                        </div>
+                        <i id="icon-d2-s6" class="fa-solid fa-chevron-down text-slate-400 transition-transform mt-4 md:mt-0 text-xl"></i>
+                    </div>
+                    <div id="d2-s6" class="accordion-content border-t border-slate-100 bg-slate-50">
+                        <div class="p-6 md:pl-[14.5rem]">
+                            <ul class="space-y-3 text-slate-700">
+                                <li><i class="fa-solid fa-caret-right text-accent mr-2"></i>1. Strengthening global Anti-Money Laundering Mechanisms</li>
+                                <li><i class="fa-solid fa-caret-right text-accent mr-2"></i>2. Data integration, Intelligence Platforms and Operations</li>
+                                <li><i class="fa-solid fa-caret-right text-accent mr-2"></i>3. Narcotics, civil society and human security: A global Approach</li>
+                                <li><i class="fa-solid fa-caret-right text-accent mr-2"></i>4. Regulating the Pharmaceutical Industry</li>
+                                <li><i class="fa-solid fa-caret-right text-accent mr-2"></i>5. Intelligence sharing, Law Enforcement and Cooperation</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white border border-slate-200 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between p-6 cursor-pointer" onclick="toggleAccordion('d2-s7')">
+                        <div class="flex flex-col md:flex-row md:items-center gap-4">
+                            <div class="flex items-center gap-2 text-accent font-bold text-sm bg-blue-50 px-3 py-1.5 rounded border border-blue-100">
+                                <i class="fa-regular fa-clock"></i> 7:30 PM - 9:30 PM IST
+                            </div>
+                            <h3 class="text-xl font-bold text-oxford">Session 7: Global Lessons in Counter-Narcotics: Models of Success</h3>
+                        </div>
+                        <i id="icon-d2-s7" class="fa-solid fa-chevron-down text-slate-400 transition-transform mt-4 md:mt-0 text-xl"></i>
+                    </div>
+                    <div id="d2-s7" class="accordion-content border-t border-slate-100 bg-slate-50">
+                        <div class="p-6 md:pl-[14.5rem]">
+                            <ul class="space-y-3 text-slate-700">
+                                <li><i class="fa-solid fa-caret-right text-accent mr-2"></i>1. Lessons from Colombia's Strategy</li>
+                                <li><i class="fa-solid fa-caret-right text-accent mr-2"></i>2. Lessons from India's Strategy</li>
+                                <li><i class="fa-solid fa-caret-right text-accent mr-2"></i>3. Lessons from the US Strategy</li>
+                                <li><i class="fa-solid fa-caret-right text-accent mr-2"></i>4. Lessons from Thailand's Strategy</li>
+                                <li><i class="fa-solid fa-caret-right text-accent mr-2"></i>5. Lessons from Singapore's Model</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-oxford text-center py-10 text-slate-400 text-sm border-t border-slate-800">
+        <div class="max-w-4xl mx-auto flex flex-col items-center">
+            <i class="fa-solid fa-shield-halved text-slate-600 text-3xl mb-4"></i>
+            <p class="mb-2">© 2026 Indic Researchers Forum & Avellon Intelligence. All rights reserved.</p>
+            <p>International Conference on Countering Narco-Terrorism</p>
+        </div>
+    </footer>
+
+    <script>
+        // Tab Switching Logic
+        function switchTab(day) {
+            const day1Btn = document.getElementById('btn-day1');
+            const day2Btn = document.getElementById('btn-day2');
+            const day1Content = document.getElementById('day1-content');
+            const day2Content = document.getElementById('day2-content');
+
+            if (day === 'day1') {
+                day1Content.style.display = 'block';
+                day2Content.style.display = 'none';
+                
+                day1Btn.classList.add('border-accent', 'text-accent');
+                day1Btn.classList.remove('border-transparent', 'text-slate-500');
+                
+                day2Btn.classList.remove('border-accent', 'text-accent');
+                day2Btn.classList.add('border-transparent', 'text-slate-500');
+            } else {
+                day2Content.style.display = 'block';
+                day1Content.style.display = 'none';
+                
+                day2Btn.classList.add('border-accent', 'text-accent');
+                day2Btn.classList.remove('border-transparent', 'text-slate-500');
+                
+                day1Btn.classList.remove('border-accent', 'text-accent');
+                day1Btn.classList.add('border-transparent', 'text-slate-500');
+            }
+        }
+
+        // Accordion Logic
+        function toggleAccordion(id) {
+            const content = document.getElementById(id);
+            const icon = document.getElementById('icon-' + id);
+            
+            if (content.classList.contains('open')) {
+                content.classList.remove('open');
+                icon.classList.remove('rotate-180', 'text-accent');
+            } else {
+                // Close all others first for clean UX
+                document.querySelectorAll('.accordion-content').forEach(el => el.classList.remove('open'));
+                document.querySelectorAll('.fa-chevron-down').forEach(el => el.classList.remove('rotate-180', 'text-accent'));
+                
+                // Open clicked
+                content.classList.add('open');
+                icon.classList.add('rotate-180', 'text-accent');
+            }
+        }
+    </script>
+</body>
+</html>
