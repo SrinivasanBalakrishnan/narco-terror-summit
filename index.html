@@ -45,15 +45,21 @@
             </div>
             <div class="hidden md:flex space-x-8 text-sm font-semibold text-slate-300">
                 <a href="#about" class="hover:text-white transition-colors">Context</a>
+                <a href="#speakers" class="hover:text-white transition-colors">Speakers</a>
                 <a href="#agenda" class="hover:text-white transition-colors">Strategic Agenda</a>
             </div>
-            <button class="bg-accent hover:bg-blue-600 text-white px-6 py-2 rounded text-sm font-semibold transition-colors shadow-md">
-                Delegate Portal
-            </button>
+            <a href="concept-note.pdf" target="_blank" class="bg-accent hover:bg-blue-600 text-white px-6 py-2 rounded text-sm font-semibold transition-colors shadow-md flex items-center gap-2">
+                <i class="fa-solid fa-file-pdf"></i> Concept Note
+            </a>
         </div>
     </nav>
 
     <section class="relative pt-32 pb-20 px-4 bg-white border-b border-slate-200 overflow-hidden">
+        
+        <video autoplay loop muted playsinline class="absolute top-0 left-0 w-full h-full object-cover opacity-10 z-0 pointer-events-none">
+            <source src="globe-animation.mp4" type="video/mp4">
+        </video>
+
         <div class="max-w-5xl mx-auto text-center relative z-10">
             <div class="inline-flex items-center space-x-2 bg-slate-100 border border-slate-200 rounded-full px-4 py-1.5 mb-8 shadow-sm">
                 <i class="fa-solid fa-globe text-accent"></i>
@@ -80,9 +86,9 @@
                 </div>
             </div>
 
-            <button class="bg-highlight hover:bg-red-800 text-white px-10 py-4 rounded-lg font-bold tracking-wide transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+            <a href="https://forms.gle/YOUR_GOOGLE_FORM_LINK_HERE" target="_blank" class="inline-block bg-highlight hover:bg-red-800 text-white px-10 py-4 rounded-lg font-bold tracking-wide transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
                 Register as Delegate
-            </button>
+            </a>
         </div>
     </section>
 
@@ -116,7 +122,67 @@
         </div>
     </section>
 
-    <section id="agenda" class="py-20 px-4 bg-white">
+    <section id="speakers" class="py-20 px-4 bg-white border-b border-slate-200">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-oxford mb-4">Distinguished Speakers</h2>
+                <div class="w-20 h-1.5 bg-accent mx-auto rounded"></div>
+                <p class="mt-6 text-slate-600 max-w-2xl mx-auto text-lg">Leading experts in intelligence, geopolitics, and global security.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                
+                <div class="bg-slate-50 rounded-xl shadow-md overflow-hidden border border-slate-200 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="h-32 bg-oxford relative">
+                        <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
+                    </div>
+                    <div class="p-6 text-center -mt-16 relative z-10">
+                        <img src="https://ui-avatars.com/api/?name=Srinivaasan+Balakrishnan&background=1d4ed8&color=fff&size=150" alt="Speaker" class="w-28 h-28 rounded-full mx-auto border-4 border-white shadow-md mb-4 bg-white">
+                        <h3 class="text-xl font-bold text-oxford">Srinivaasan Balakrishnan</h3>
+                        <p class="text-accent font-semibold text-sm mb-1">Co-Founder, Avellon Intelligence</p>
+                        <p class="text-slate-500 text-sm mb-4 italic">Author, The Architecture of Dominion</p>
+                        <div class="flex justify-center space-x-4 border-t border-slate-200 pt-4">
+                            <a href="#" class="text-slate-400 hover:text-blue-700 transition-colors"><i class="fa-brands fa-linkedin text-xl"></i></a>
+                            <a href="#" class="text-slate-400 hover:text-oxford transition-colors"><i class="fa-solid fa-envelope text-xl"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-slate-50 rounded-xl shadow-md overflow-hidden border border-slate-200 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="h-32 bg-slate-200 relative"></div>
+                    <div class="p-6 text-center -mt-16 relative z-10">
+                        <div class="w-28 h-28 rounded-full mx-auto border-4 border-white shadow-md mb-4 bg-slate-100 flex items-center justify-center">
+                            <i class="fa-solid fa-user text-3xl text-slate-400"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-oxford">Expert Name</h3>
+                        <p class="text-accent font-semibold text-sm mb-1">Title & Affiliation</p>
+                        <p class="text-slate-500 text-sm mb-4 italic">Specialty Area</p>
+                        <div class="flex justify-center space-x-4 border-t border-slate-200 pt-4">
+                            <a href="#" class="text-slate-400 hover:text-blue-700 transition-colors"><i class="fa-brands fa-linkedin text-xl"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-slate-50 rounded-xl shadow-md overflow-hidden border border-slate-200 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="h-32 bg-slate-200 relative"></div>
+                    <div class="p-6 text-center -mt-16 relative z-10">
+                        <div class="w-28 h-28 rounded-full mx-auto border-4 border-white shadow-md mb-4 bg-slate-100 flex items-center justify-center">
+                            <i class="fa-solid fa-user text-3xl text-slate-400"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-oxford">Expert Name</h3>
+                        <p class="text-accent font-semibold text-sm mb-1">Title & Affiliation</p>
+                        <p class="text-slate-500 text-sm mb-4 italic">Specialty Area</p>
+                        <div class="flex justify-center space-x-4 border-t border-slate-200 pt-4">
+                            <a href="#" class="text-slate-400 hover:text-blue-700 transition-colors"><i class="fa-brands fa-linkedin text-xl"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="agenda" class="py-20 px-4 bg-slate-50">
         <div class="max-w-5xl mx-auto">
             <div class="text-center mb-12">
                 <h2 class="text-4xl font-bold text-oxford mb-4">Strategic Agenda</h2>
