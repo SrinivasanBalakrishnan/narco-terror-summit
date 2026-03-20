@@ -55,15 +55,16 @@
         }
     </style>
 </head>
-<body class="antialiased selection:bg-accent selection:text-white">
+<body class="antialiased selection:bg-accent selection:text-white relative">
 
     <nav id="navbar" class="fixed w-full z-50 bg-oxford border-b border-slate-800 shadow-lg transition-all duration-300">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            
             <a href="https://www.indicrf.org/" class="flex items-center space-x-3 group">
-                <img src="Indic Logo.png" alt="Indic Researchers Forum Logo" class="h-12 w-auto group-hover:opacity-80 transition-opacity">
-                <div class="flex flex-col">
-                    <span class="font-bold text-lg leading-tight tracking-wider text-white group-hover:text-blue-400 transition-colors">INDIC RESEARCHERS FORUM</span>
-                    <span class="text-[10px] text-blue-300 tracking-widest uppercase">Civilisation • Security • Statesmanship</span>
+                <img src="Indic Logo.png" alt="Indic Researchers Forum Logo" class="h-10 md:h-12 w-auto group-hover:opacity-80 transition-opacity">
+                <div class="flex flex-col hidden sm:flex">
+                    <span class="font-bold text-[15px] md:text-lg leading-tight tracking-wider text-white group-hover:text-blue-400 transition-colors">INDIC RESEARCHERS FORUM</span>
+                    <span class="text-[8px] md:text-[10px] text-blue-300 tracking-widest uppercase">Civilisation • Security • Statesmanship</span>
                 </div>
             </a>
             
@@ -80,63 +81,80 @@
                     <span class="text-[10px] text-blue-300 tracking-widest uppercase">Strategic Risk & Intelligence</span>
                 </div>
             </a>
+
+            <button id="mobile-menu-btn" class="block md:hidden text-slate-300 hover:text-white focus:outline-none ml-auto">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden absolute top-20 left-0 w-full bg-oxford border-b border-slate-800 shadow-xl flex-col md:hidden">
+            <a href="#about" class="px-6 py-4 text-slate-300 hover:text-white hover:bg-slate-800 border-b border-slate-800 font-semibold" onclick="toggleMobileMenu()">Context</a>
+            <a href="#speakers" class="px-6 py-4 text-slate-300 hover:text-white hover:bg-slate-800 border-b border-slate-800 font-semibold" onclick="toggleMobileMenu()">Speakers</a>
+            <a href="#agenda" class="px-6 py-4 text-slate-300 hover:text-white hover:bg-slate-800 border-b border-slate-800 font-semibold" onclick="toggleMobileMenu()">Strategic Agenda</a>
+            <a href="https://www.avellonintelligence.com/" class="px-6 py-5 flex items-center space-x-3 hover:bg-slate-800 bg-slate-900" onclick="toggleMobileMenu()">
+                <img src="Avellon logo1.png" alt="Avellon Intelligence Logo" class="h-8 w-auto">
+                <div class="flex flex-col text-left">
+                    <span class="font-bold text-sm leading-tight tracking-wider text-white">AVELLON INTELLIGENCE</span>
+                    <span class="text-[8px] text-blue-300 tracking-widest uppercase">Strategic Risk & Intelligence</span>
+                </div>
+            </a>
         </div>
     </nav>
 
     <section class="relative pt-32 pb-20 px-4 bg-white border-b border-slate-200 overflow-hidden">
         
-        <video autoplay loop muted playsinline class="absolute top-0 left-0 w-full h-full object-cover opacity-10 z-0 pointer-events-none">
+        <video autoplay loop muted playsinline class="absolute top-0 left-0 w-full h-full object-cover opacity-15 z-0 pointer-events-none">
             <source src="globe-animation.mp4" type="video/mp4">
         </video>
 
         <div class="max-w-5xl mx-auto text-center relative z-10">
             <div class="inline-flex items-center space-x-2 bg-slate-100 border border-slate-200 rounded-full px-4 py-1.5 mb-8 shadow-sm">
                 <i class="fa-solid fa-globe text-accent"></i>
-                <span class="text-xs font-bold tracking-widest text-oxford uppercase">Global Security Summit 2026</span>
+                <span class="text-[10px] md:text-xs font-bold tracking-widest text-oxford uppercase">Global Security Summit 2026</span>
             </div>
 
-            <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight mb-6 text-oxford">
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight mb-6 text-oxford leading-tight">
                 International Conference on <br class="hidden md:block" />
                 <span class="text-accent">Countering Narco-Terrorism</span>
             </h1>
 
-            <p class="text-lg md:text-xl text-slate-600 mb-10 max-w-3xl mx-auto leading-relaxed">
+            <p class="text-base md:text-xl text-slate-600 mb-10 max-w-3xl mx-auto leading-relaxed">
                 Examining the evolving nexus between global drug cartels, illicit financial flows, and terror financing systems to safeguard global security.
             </p>
 
-            <div class="flex flex-col md:flex-row items-center justify-center gap-4 mb-10">
-                <div class="flex items-center space-x-2 text-slate-700 font-semibold bg-slate-50 px-6 py-3 rounded-lg border border-slate-200 shadow-sm">
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
+                <div class="flex items-center space-x-2 text-slate-700 font-semibold bg-slate-50 px-6 py-3 rounded-lg border border-slate-200 shadow-sm w-full sm:w-auto justify-center">
                     <i class="fa-regular fa-calendar text-accent text-lg"></i>
                     <span>April 10-11, 2026</span>
                 </div>
-                <div class="flex items-center space-x-2 text-slate-700 font-semibold bg-slate-50 px-6 py-3 rounded-lg border border-slate-200 shadow-sm">
+                <div class="flex items-center space-x-2 text-slate-700 font-semibold bg-slate-50 px-6 py-3 rounded-lg border border-slate-200 shadow-sm w-full sm:w-auto justify-center">
                     <i class="fa-solid fa-location-dot text-accent text-lg"></i>
                     <span>Virtual Summit (Google Meet)</span>
                 </div>
             </div>
 
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSczzKSV1C3aAAizSdMVugLqQ0Kqgog5M9GcpugGbV22PsgufQ/viewform" target="_blank" class="inline-block bg-highlight hover:bg-red-800 text-white px-10 py-4 rounded-lg font-bold tracking-wide transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSczzKSV1C3aAAizSdMVugLqQ0Kqgog5M9GcpugGbV22PsgufQ/viewform" target="_blank" class="inline-block w-full sm:w-auto bg-highlight hover:bg-red-800 text-white px-10 py-4 rounded-lg font-bold tracking-wide transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
                 Register as Delegate
             </a>
         </div>
     </section>
 
-    <section id="about" class="py-20 px-4 bg-slate-50 border-b border-slate-200">
+    <section id="about" class="py-16 md:py-20 px-4 bg-slate-50 border-b border-slate-200">
         <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
             <div>
-                <h2 class="text-3xl font-bold text-oxford mb-6 flex items-center gap-3">
+                <h2 class="text-2xl md:text-3xl font-bold text-oxford mb-6 flex items-center gap-3">
                     <i class="fa-solid fa-book-open text-accent"></i> The Strategic Context
                 </h2>
-                <p class="text-slate-600 mb-4 leading-relaxed text-lg">
+                <p class="text-slate-600 mb-4 leading-relaxed text-base md:text-lg">
                     The global narcotics trade has evolved into one of the most powerful drivers of transnational crime, increasingly intersecting with terrorism, organized criminal networks, and illicit financial systems.
                 </p>
-                <p class="text-slate-600 leading-relaxed text-lg">
+                <p class="text-slate-600 leading-relaxed text-base md:text-lg">
                     From the Golden Crescent to Latin America, the nexus between narcotics trafficking and terrorism has emerged as a critical challenge for global security, undermining governance and fueling violent conflicts.
                 </p>
             </div>
-            <div class="bg-white p-10 border border-slate-200 rounded-xl shadow-md relative overflow-hidden">
+            <div class="bg-white p-8 md:p-10 border border-slate-200 rounded-xl shadow-md relative overflow-hidden">
                 <div class="absolute top-0 left-0 w-1.5 h-full bg-accent"></div>
-                <h3 class="font-bold text-oxford mb-6 text-2xl border-b border-slate-100 pb-4">Organizing Partners</h3>
+                <h3 class="font-bold text-oxford mb-6 text-xl md:text-2xl border-b border-slate-100 pb-4">Organizing Partners</h3>
                 
                 <div class="mb-6">
                     <p class="text-oxford font-bold text-lg"><i class="fa-solid fa-landmark text-accent mr-2"></i>Indic Researchers Forum</p>
@@ -151,207 +169,206 @@
         </div>
     </section>
 
-    <section id="speakers" class="py-20 px-4 bg-white border-b border-slate-200">
+    <section id="speakers" class="py-16 md:py-20 px-4 bg-white border-b border-slate-200">
         <div class="max-w-6xl mx-auto">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-oxford mb-4">Conference Leadership</h2>
+            <div class="text-center mb-12 md:mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-oxford mb-4">Conference Leadership</h2>
                 <div class="w-20 h-1.5 bg-accent mx-auto rounded"></div>
-                <p class="mt-6 text-slate-600 max-w-2xl mx-auto text-lg">Guided by leading experts in intelligence, geopolitics, and global security.</p>
+                <p class="mt-6 text-slate-600 max-w-2xl mx-auto text-base md:text-lg">Guided by leading experts in intelligence, geopolitics, and global security.</p>
             </div>
 
             <div class="mb-16 max-w-4xl mx-auto bg-slate-50 rounded-2xl shadow-lg border border-slate-200 overflow-hidden flex flex-col md:flex-row items-center transform hover:-translate-y-1 transition-all duration-300">
-                <div class="w-full md:w-2/5 h-72 md:h-auto relative flex-shrink-0 flex items-center justify-center">
-                    <img src="hs ips.jpg" alt="Harjit Sandhu" class="relative z-10 w-48 h-48 rounded-full border-4 border-white shadow-xl bg-white object-cover my-8">
+                <div class="w-full md:w-2/5 h-64 md:h-auto relative flex-shrink-0 flex items-center justify-center">
+                    <img src="hs ips.jpg" alt="Harjit Sandhu" class="relative z-10 w-40 h-40 md:w-48 md:h-48 rounded-full border-4 border-white shadow-xl bg-white object-cover my-6 md:my-8">
                 </div>
-                <div class="p-8 md:p-10 w-full md:w-3/5">
-                    <div class="inline-block bg-blue-100 text-accent font-bold px-3 py-1 rounded-full text-xs mb-4 border border-blue-200 uppercase tracking-widest">Conference Convenor</div>
-                    <h3 class="text-3xl font-extrabold text-oxford mb-2">Harjit Sandhu</h3>
-                    <p class="text-accent font-bold text-base mb-2">Former IPS Officer </p>
-                    <p class="text-slate-500 text-sm mb-6 italic font-medium">International Security & Counter-Terrorism Expert</p>
-                    <p class="text-slate-600 mb-6 leading-relaxed">
+                <div class="p-6 md:p-10 w-full md:w-3/5 text-center md:text-left">
+                    <div class="inline-block bg-blue-100 text-accent font-bold px-3 py-1 rounded-full text-[10px] md:text-xs mb-4 border border-blue-200 uppercase tracking-widest">Conference Convenor</div>
+                    <h3 class="text-2xl md:text-3xl font-extrabold text-oxford mb-2">Harjit Sandhu</h3>
+                    <p class="text-accent font-bold text-sm md:text-base mb-2">Former IPS Officer </p>
+                    <p class="text-slate-500 text-xs md:text-sm mb-4 md:mb-6 italic font-medium">International Security & Counter-Terrorism Expert</p>
+                    <p class="text-slate-600 text-sm md:text-base leading-relaxed">
                         Ex-UN Security Council Panel Expert with extensive experience in global sanctions, money laundering, and transnational crime; recipient of the President’s Police Medal.
                     </p>
                 </div>
             </div>
 
-            <div class="text-center mb-10">
-                <h3 class="text-2xl font-bold text-oxford mb-2">Distinguished Panelists</h3>
+            <div class="text-center mb-8">
+                <h3 class="text-xl md:text-2xl font-bold text-oxford mb-2">Distinguished Panelists</h3>
             </div>
             
-            <div class="marquee-container max-w-7xl mx-auto px-4">
+            <div class="marquee-container max-w-7xl mx-auto px-2 md:px-4">
                 <div class="marquee-content">
                     
-                    <div class="w-80 bg-slate-50 rounded-xl shadow-md overflow-hidden border border-slate-200 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex-shrink-0">
-                        <div class="h-24 bg-slate-200 relative"></div>
+                    <div class="w-72 md:w-80 bg-slate-50 rounded-xl shadow-md overflow-hidden border border-slate-200 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex-shrink-0">
+                        <div class="h-20 md:h-24 bg-slate-200 relative"></div>
                         <div class="p-6 text-center -mt-12 relative z-10">
-                            <div class="w-24 h-24 rounded-full mx-auto border-4 border-white shadow-md mb-4 bg-slate-100 flex items-center justify-center">
-                                <i class="fa-solid fa-user text-3xl text-slate-400"></i>
+                            <div class="w-20 h-20 md:w-24 md:h-24 rounded-full mx-auto border-4 border-white shadow-md mb-4 bg-slate-100 flex items-center justify-center">
+                                <i class="fa-solid fa-user text-2xl md:text-3xl text-slate-400"></i>
                             </div>
-                            <h3 class="text-xl font-bold text-oxford">Speaker Name 1</h3>
-                            <p class="text-accent font-semibold text-sm mb-1">Title & Affiliation</p>
-                            <p class="text-slate-500 text-sm mb-4 italic">Specialty Area</p>
+                            <h3 class="text-lg md:text-xl font-bold text-oxford">Speaker Name 1</h3>
+                            <p class="text-accent font-semibold text-xs md:text-sm mb-1">Title & Affiliation</p>
+                            <p class="text-slate-500 text-xs md:text-sm mb-4 italic">Specialty Area</p>
                             <div class="flex justify-center space-x-4 border-t border-slate-200 pt-4">
                                 <a href="#" class="text-slate-400 hover:text-blue-700 transition-colors"><i class="fa-brands fa-linkedin text-lg"></i></a>
                             </div>
                         </div>
                     </div>
 
-                    <div class="w-80 bg-slate-50 rounded-xl shadow-md overflow-hidden border border-slate-200 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex-shrink-0">
-                        <div class="h-24 bg-slate-200 relative"></div>
+                    <div class="w-72 md:w-80 bg-slate-50 rounded-xl shadow-md overflow-hidden border border-slate-200 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex-shrink-0">
+                        <div class="h-20 md:h-24 bg-slate-200 relative"></div>
                         <div class="p-6 text-center -mt-12 relative z-10">
-                            <div class="w-24 h-24 rounded-full mx-auto border-4 border-white shadow-md mb-4 bg-slate-100 flex items-center justify-center">
-                                <i class="fa-solid fa-user text-3xl text-slate-400"></i>
+                            <div class="w-20 h-20 md:w-24 md:h-24 rounded-full mx-auto border-4 border-white shadow-md mb-4 bg-slate-100 flex items-center justify-center">
+                                <i class="fa-solid fa-user text-2xl md:text-3xl text-slate-400"></i>
                             </div>
-                            <h3 class="text-xl font-bold text-oxford">Speaker Name 2</h3>
-                            <p class="text-accent font-semibold text-sm mb-1">Title & Affiliation</p>
-                            <p class="text-slate-500 text-sm mb-4 italic">Specialty Area</p>
+                            <h3 class="text-lg md:text-xl font-bold text-oxford">Speaker Name 2</h3>
+                            <p class="text-accent font-semibold text-xs md:text-sm mb-1">Title & Affiliation</p>
+                            <p class="text-slate-500 text-xs md:text-sm mb-4 italic">Specialty Area</p>
                             <div class="flex justify-center space-x-4 border-t border-slate-200 pt-4">
                                 <a href="#" class="text-slate-400 hover:text-blue-700 transition-colors"><i class="fa-brands fa-linkedin text-lg"></i></a>
                             </div>
                         </div>
                     </div>
 
-                    <div class="w-80 bg-slate-50 rounded-xl shadow-md overflow-hidden border border-slate-200 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex-shrink-0">
-                        <div class="h-24 bg-slate-200 relative"></div>
+                    <div class="w-72 md:w-80 bg-slate-50 rounded-xl shadow-md overflow-hidden border border-slate-200 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex-shrink-0">
+                        <div class="h-20 md:h-24 bg-slate-200 relative"></div>
                         <div class="p-6 text-center -mt-12 relative z-10">
-                            <div class="w-24 h-24 rounded-full mx-auto border-4 border-white shadow-md mb-4 bg-slate-100 flex items-center justify-center">
-                                <i class="fa-solid fa-user text-3xl text-slate-400"></i>
+                            <div class="w-20 h-20 md:w-24 md:h-24 rounded-full mx-auto border-4 border-white shadow-md mb-4 bg-slate-100 flex items-center justify-center">
+                                <i class="fa-solid fa-user text-2xl md:text-3xl text-slate-400"></i>
                             </div>
-                            <h3 class="text-xl font-bold text-oxford">Speaker Name 3</h3>
-                            <p class="text-accent font-semibold text-sm mb-1">Title & Affiliation</p>
-                            <p class="text-slate-500 text-sm mb-4 italic">Specialty Area</p>
+                            <h3 class="text-lg md:text-xl font-bold text-oxford">Speaker Name 3</h3>
+                            <p class="text-accent font-semibold text-xs md:text-sm mb-1">Title & Affiliation</p>
+                            <p class="text-slate-500 text-xs md:text-sm mb-4 italic">Specialty Area</p>
                             <div class="flex justify-center space-x-4 border-t border-slate-200 pt-4">
                                 <a href="#" class="text-slate-400 hover:text-blue-700 transition-colors"><i class="fa-brands fa-linkedin text-lg"></i></a>
                             </div>
                         </div>
                     </div>
 
-                    <div class="w-80 bg-slate-50 rounded-xl shadow-md overflow-hidden border border-slate-200 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex-shrink-0">
-                        <div class="h-24 bg-slate-200 relative"></div>
+                    <div class="w-72 md:w-80 bg-slate-50 rounded-xl shadow-md overflow-hidden border border-slate-200 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex-shrink-0">
+                        <div class="h-20 md:h-24 bg-slate-200 relative"></div>
                         <div class="p-6 text-center -mt-12 relative z-10">
-                            <div class="w-24 h-24 rounded-full mx-auto border-4 border-white shadow-md mb-4 bg-slate-100 flex items-center justify-center">
-                                <i class="fa-solid fa-user text-3xl text-slate-400"></i>
+                            <div class="w-20 h-20 md:w-24 md:h-24 rounded-full mx-auto border-4 border-white shadow-md mb-4 bg-slate-100 flex items-center justify-center">
+                                <i class="fa-solid fa-user text-2xl md:text-3xl text-slate-400"></i>
                             </div>
-                            <h3 class="text-xl font-bold text-oxford">Speaker Name 4</h3>
-                            <p class="text-accent font-semibold text-sm mb-1">Title & Affiliation</p>
-                            <p class="text-slate-500 text-sm mb-4 italic">Specialty Area</p>
+                            <h3 class="text-lg md:text-xl font-bold text-oxford">Speaker Name 4</h3>
+                            <p class="text-accent font-semibold text-xs md:text-sm mb-1">Title & Affiliation</p>
+                            <p class="text-slate-500 text-xs md:text-sm mb-4 italic">Specialty Area</p>
                             <div class="flex justify-center space-x-4 border-t border-slate-200 pt-4">
                                 <a href="#" class="text-slate-400 hover:text-blue-700 transition-colors"><i class="fa-brands fa-linkedin text-lg"></i></a>
                             </div>
                         </div>
                     </div>
 
-                    <div class="w-80 bg-slate-50 rounded-xl shadow-md overflow-hidden border border-slate-200 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex-shrink-0">
-                        <div class="h-24 bg-slate-200 relative"></div>
+                    <div class="w-72 md:w-80 bg-slate-50 rounded-xl shadow-md overflow-hidden border border-slate-200 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex-shrink-0">
+                        <div class="h-20 md:h-24 bg-slate-200 relative"></div>
                         <div class="p-6 text-center -mt-12 relative z-10">
-                            <div class="w-24 h-24 rounded-full mx-auto border-4 border-white shadow-md mb-4 bg-slate-100 flex items-center justify-center">
-                                <i class="fa-solid fa-user text-3xl text-slate-400"></i>
+                            <div class="w-20 h-20 md:w-24 md:h-24 rounded-full mx-auto border-4 border-white shadow-md mb-4 bg-slate-100 flex items-center justify-center">
+                                <i class="fa-solid fa-user text-2xl md:text-3xl text-slate-400"></i>
                             </div>
-                            <h3 class="text-xl font-bold text-oxford">Speaker Name 5</h3>
-                            <p class="text-accent font-semibold text-sm mb-1">Title & Affiliation</p>
-                            <p class="text-slate-500 text-sm mb-4 italic">Specialty Area</p>
+                            <h3 class="text-lg md:text-xl font-bold text-oxford">Speaker Name 5</h3>
+                            <p class="text-accent font-semibold text-xs md:text-sm mb-1">Title & Affiliation</p>
+                            <p class="text-slate-500 text-xs md:text-sm mb-4 italic">Specialty Area</p>
                             <div class="flex justify-center space-x-4 border-t border-slate-200 pt-4">
                                 <a href="#" class="text-slate-400 hover:text-blue-700 transition-colors"><i class="fa-brands fa-linkedin text-lg"></i></a>
                             </div>
                         </div>
                     </div>
-                    
-                    </div>
+                </div>
 
                 <div class="marquee-content" aria-hidden="true">
                     
-                    <div class="w-80 bg-slate-50 rounded-xl shadow-md overflow-hidden border border-slate-200 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex-shrink-0">
-                        <div class="h-24 bg-slate-200 relative"></div>
+                    <div class="w-72 md:w-80 bg-slate-50 rounded-xl shadow-md overflow-hidden border border-slate-200 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex-shrink-0">
+                        <div class="h-20 md:h-24 bg-slate-200 relative"></div>
                         <div class="p-6 text-center -mt-12 relative z-10">
-                            <div class="w-24 h-24 rounded-full mx-auto border-4 border-white shadow-md mb-4 bg-slate-100 flex items-center justify-center">
-                                <i class="fa-solid fa-user text-3xl text-slate-400"></i>
+                            <div class="w-20 h-20 md:w-24 md:h-24 rounded-full mx-auto border-4 border-white shadow-md mb-4 bg-slate-100 flex items-center justify-center">
+                                <i class="fa-solid fa-user text-2xl md:text-3xl text-slate-400"></i>
                             </div>
-                            <h3 class="text-xl font-bold text-oxford">Speaker Name 1</h3>
-                            <p class="text-accent font-semibold text-sm mb-1">Title & Affiliation</p>
-                            <p class="text-slate-500 text-sm mb-4 italic">Specialty Area</p>
+                            <h3 class="text-lg md:text-xl font-bold text-oxford">Speaker Name 1</h3>
+                            <p class="text-accent font-semibold text-xs md:text-sm mb-1">Title & Affiliation</p>
+                            <p class="text-slate-500 text-xs md:text-sm mb-4 italic">Specialty Area</p>
                             <div class="flex justify-center space-x-4 border-t border-slate-200 pt-4">
                                 <a href="#" class="text-slate-400 hover:text-blue-700 transition-colors"><i class="fa-brands fa-linkedin text-lg"></i></a>
                             </div>
                         </div>
                     </div>
 
-                    <div class="w-80 bg-slate-50 rounded-xl shadow-md overflow-hidden border border-slate-200 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex-shrink-0">
-                        <div class="h-24 bg-slate-200 relative"></div>
+                    <div class="w-72 md:w-80 bg-slate-50 rounded-xl shadow-md overflow-hidden border border-slate-200 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex-shrink-0">
+                        <div class="h-20 md:h-24 bg-slate-200 relative"></div>
                         <div class="p-6 text-center -mt-12 relative z-10">
-                            <div class="w-24 h-24 rounded-full mx-auto border-4 border-white shadow-md mb-4 bg-slate-100 flex items-center justify-center">
-                                <i class="fa-solid fa-user text-3xl text-slate-400"></i>
+                            <div class="w-20 h-20 md:w-24 md:h-24 rounded-full mx-auto border-4 border-white shadow-md mb-4 bg-slate-100 flex items-center justify-center">
+                                <i class="fa-solid fa-user text-2xl md:text-3xl text-slate-400"></i>
                             </div>
-                            <h3 class="text-xl font-bold text-oxford">Speaker Name 2</h3>
-                            <p class="text-accent font-semibold text-sm mb-1">Title & Affiliation</p>
-                            <p class="text-slate-500 text-sm mb-4 italic">Specialty Area</p>
+                            <h3 class="text-lg md:text-xl font-bold text-oxford">Speaker Name 2</h3>
+                            <p class="text-accent font-semibold text-xs md:text-sm mb-1">Title & Affiliation</p>
+                            <p class="text-slate-500 text-xs md:text-sm mb-4 italic">Specialty Area</p>
                             <div class="flex justify-center space-x-4 border-t border-slate-200 pt-4">
                                 <a href="#" class="text-slate-400 hover:text-blue-700 transition-colors"><i class="fa-brands fa-linkedin text-lg"></i></a>
                             </div>
                         </div>
                     </div>
 
-                    <div class="w-80 bg-slate-50 rounded-xl shadow-md overflow-hidden border border-slate-200 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex-shrink-0">
-                        <div class="h-24 bg-slate-200 relative"></div>
+                    <div class="w-72 md:w-80 bg-slate-50 rounded-xl shadow-md overflow-hidden border border-slate-200 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex-shrink-0">
+                        <div class="h-20 md:h-24 bg-slate-200 relative"></div>
                         <div class="p-6 text-center -mt-12 relative z-10">
-                            <div class="w-24 h-24 rounded-full mx-auto border-4 border-white shadow-md mb-4 bg-slate-100 flex items-center justify-center">
-                                <i class="fa-solid fa-user text-3xl text-slate-400"></i>
+                            <div class="w-20 h-20 md:w-24 md:h-24 rounded-full mx-auto border-4 border-white shadow-md mb-4 bg-slate-100 flex items-center justify-center">
+                                <i class="fa-solid fa-user text-2xl md:text-3xl text-slate-400"></i>
                             </div>
-                            <h3 class="text-xl font-bold text-oxford">Speaker Name 3</h3>
-                            <p class="text-accent font-semibold text-sm mb-1">Title & Affiliation</p>
-                            <p class="text-slate-500 text-sm mb-4 italic">Specialty Area</p>
+                            <h3 class="text-lg md:text-xl font-bold text-oxford">Speaker Name 3</h3>
+                            <p class="text-accent font-semibold text-xs md:text-sm mb-1">Title & Affiliation</p>
+                            <p class="text-slate-500 text-xs md:text-sm mb-4 italic">Specialty Area</p>
                             <div class="flex justify-center space-x-4 border-t border-slate-200 pt-4">
                                 <a href="#" class="text-slate-400 hover:text-blue-700 transition-colors"><i class="fa-brands fa-linkedin text-lg"></i></a>
                             </div>
                         </div>
                     </div>
 
-                    <div class="w-80 bg-slate-50 rounded-xl shadow-md overflow-hidden border border-slate-200 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex-shrink-0">
-                        <div class="h-24 bg-slate-200 relative"></div>
+                    <div class="w-72 md:w-80 bg-slate-50 rounded-xl shadow-md overflow-hidden border border-slate-200 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex-shrink-0">
+                        <div class="h-20 md:h-24 bg-slate-200 relative"></div>
                         <div class="p-6 text-center -mt-12 relative z-10">
-                            <div class="w-24 h-24 rounded-full mx-auto border-4 border-white shadow-md mb-4 bg-slate-100 flex items-center justify-center">
-                                <i class="fa-solid fa-user text-3xl text-slate-400"></i>
+                            <div class="w-20 h-20 md:w-24 md:h-24 rounded-full mx-auto border-4 border-white shadow-md mb-4 bg-slate-100 flex items-center justify-center">
+                                <i class="fa-solid fa-user text-2xl md:text-3xl text-slate-400"></i>
                             </div>
-                            <h3 class="text-xl font-bold text-oxford">Speaker Name 4</h3>
-                            <p class="text-accent font-semibold text-sm mb-1">Title & Affiliation</p>
-                            <p class="text-slate-500 text-sm mb-4 italic">Specialty Area</p>
+                            <h3 class="text-lg md:text-xl font-bold text-oxford">Speaker Name 4</h3>
+                            <p class="text-accent font-semibold text-xs md:text-sm mb-1">Title & Affiliation</p>
+                            <p class="text-slate-500 text-xs md:text-sm mb-4 italic">Specialty Area</p>
                             <div class="flex justify-center space-x-4 border-t border-slate-200 pt-4">
                                 <a href="#" class="text-slate-400 hover:text-blue-700 transition-colors"><i class="fa-brands fa-linkedin text-lg"></i></a>
                             </div>
                         </div>
                     </div>
 
-                    <div class="w-80 bg-slate-50 rounded-xl shadow-md overflow-hidden border border-slate-200 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex-shrink-0">
-                        <div class="h-24 bg-slate-200 relative"></div>
+                    <div class="w-72 md:w-80 bg-slate-50 rounded-xl shadow-md overflow-hidden border border-slate-200 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex-shrink-0">
+                        <div class="h-20 md:h-24 bg-slate-200 relative"></div>
                         <div class="p-6 text-center -mt-12 relative z-10">
-                            <div class="w-24 h-24 rounded-full mx-auto border-4 border-white shadow-md mb-4 bg-slate-100 flex items-center justify-center">
-                                <i class="fa-solid fa-user text-3xl text-slate-400"></i>
+                            <div class="w-20 h-20 md:w-24 md:h-24 rounded-full mx-auto border-4 border-white shadow-md mb-4 bg-slate-100 flex items-center justify-center">
+                                <i class="fa-solid fa-user text-2xl md:text-3xl text-slate-400"></i>
                             </div>
-                            <h3 class="text-xl font-bold text-oxford">Speaker Name 5</h3>
-                            <p class="text-accent font-semibold text-sm mb-1">Title & Affiliation</p>
-                            <p class="text-slate-500 text-sm mb-4 italic">Specialty Area</p>
+                            <h3 class="text-lg md:text-xl font-bold text-oxford">Speaker Name 5</h3>
+                            <p class="text-accent font-semibold text-xs md:text-sm mb-1">Title & Affiliation</p>
+                            <p class="text-slate-500 text-xs md:text-sm mb-4 italic">Specialty Area</p>
                             <div class="flex justify-center space-x-4 border-t border-slate-200 pt-4">
                                 <a href="#" class="text-slate-400 hover:text-blue-700 transition-colors"><i class="fa-brands fa-linkedin text-lg"></i></a>
                             </div>
                         </div>
                     </div>
-                    
-                    </div>
+
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="agenda" class="py-20 px-4 bg-slate-50">
+    <section id="agenda" class="py-16 md:py-20 px-4 bg-slate-50">
         <div class="max-w-5xl mx-auto">
             <div class="text-center mb-12">
-                <h2 class="text-4xl font-bold text-oxford mb-4">Strategic Agenda</h2>
+                <h2 class="text-3xl md:text-4xl font-bold text-oxford mb-4">Strategic Agenda</h2>
                 <div class="w-20 h-1.5 bg-accent mx-auto rounded"></div>
             </div>
 
-            <div class="flex justify-center space-x-4 mb-10 border-b border-slate-200 pb-px">
-                <button id="btn-day1" onclick="switchTab('day1')" class="px-8 py-3 text-lg font-bold transition-all border-b-4 border-accent text-accent">
+            <div class="flex justify-center space-x-2 md:space-x-4 mb-10 border-b border-slate-200 pb-px">
+                <button id="btn-day1" onclick="switchTab('day1')" class="px-4 md:px-8 py-3 text-base md:text-lg font-bold transition-all border-b-4 border-accent text-accent">
                     Day 1 (April 10)
                 </button>
-                <button id="btn-day2" onclick="switchTab('day2')" class="px-8 py-3 text-lg font-bold transition-all border-b-4 border-transparent text-slate-500 hover:text-slate-800">
+                <button id="btn-day2" onclick="switchTab('day2')" class="px-4 md:px-8 py-3 text-base md:text-lg font-bold transition-all border-b-4 border-transparent text-slate-500 hover:text-slate-800">
                     Day 2 (April 11)
                 </button>
             </div>
@@ -359,18 +376,18 @@
             <div id="day1-content" class="space-y-4 block animate-fade-in">
                 
                 <div class="bg-white border border-slate-200 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                    <div class="flex flex-col md:flex-row md:items-center justify-between p-6 cursor-pointer" onclick="toggleAccordion('d1-inaugural')">
-                        <div class="flex flex-col md:flex-row md:items-center gap-4">
-                            <div class="flex items-center gap-2 text-accent font-bold text-sm bg-blue-50 px-3 py-1.5 rounded border border-blue-100">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between p-4 md:p-6 cursor-pointer" onclick="toggleAccordion('d1-inaugural')">
+                        <div class="flex flex-col md:flex-row md:items-center gap-3 md:gap-4">
+                            <div class="flex items-center gap-2 text-accent font-bold text-xs md:text-sm bg-blue-50 px-3 py-1.5 rounded border border-blue-100 self-start md:self-auto">
                                 <i class="fa-regular fa-clock"></i> 1:30 PM - 3:00 PM IST
                             </div>
-                            <h3 class="text-xl font-bold text-oxford">Inaugural Session</h3>
+                            <h3 class="text-lg md:text-xl font-bold text-oxford">Inaugural Session</h3>
                         </div>
-                        <i id="icon-d1-inaugural" class="fa-solid fa-chevron-down text-slate-400 transition-transform mt-4 md:mt-0 text-xl"></i>
+                        <i id="icon-d1-inaugural" class="fa-solid fa-chevron-down text-slate-400 transition-transform mt-2 md:mt-0 text-lg md:text-xl self-end md:self-auto"></i>
                     </div>
                     <div id="d1-inaugural" class="accordion-content border-t border-slate-100 bg-slate-50">
-                        <div class="p-6 md:pl-[14.5rem]">
-                            <ul class="space-y-3 text-slate-700 font-medium">
+                        <div class="p-4 md:p-6 md:pl-[14.5rem]">
+                            <ul class="space-y-3 text-slate-700 font-medium text-sm md:text-base">
                                 <li><i class="fa-solid fa-caret-right text-accent mr-2"></i>1. Keynote Address</li>
                                 <li><i class="fa-solid fa-caret-right text-accent mr-2"></i>2. Keynote Address</li>
                                 <li><i class="fa-solid fa-caret-right text-accent mr-2"></i>3. Chief Guest Address</li>
@@ -380,18 +397,18 @@
                 </div>
 
                 <div class="bg-white border border-slate-200 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                    <div class="flex flex-col md:flex-row md:items-center justify-between p-6 cursor-pointer" onclick="toggleAccordion('d1-s1')">
-                        <div class="flex flex-col md:flex-row md:items-center gap-4">
-                            <div class="flex items-center gap-2 text-accent font-bold text-sm bg-blue-50 px-3 py-1.5 rounded border border-blue-100">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between p-4 md:p-6 cursor-pointer" onclick="toggleAccordion('d1-s1')">
+                        <div class="flex flex-col md:flex-row md:items-center gap-3 md:gap-4">
+                            <div class="flex items-center gap-2 text-accent font-bold text-xs md:text-sm bg-blue-50 px-3 py-1.5 rounded border border-blue-100 self-start md:self-auto">
                                 <i class="fa-regular fa-clock"></i> 3:00 PM - 5:00 PM IST
                             </div>
-                            <h3 class="text-xl font-bold text-oxford">Session 1: The Golden Crescent - Drugs, Militancy and Terror Financing</h3>
+                            <h3 class="text-lg md:text-xl font-bold text-oxford">Session 1: The Golden Crescent - Drugs, Militancy and Terror Financing</h3>
                         </div>
-                        <i id="icon-d1-s1" class="fa-solid fa-chevron-down text-slate-400 transition-transform mt-4 md:mt-0 text-xl"></i>
+                        <i id="icon-d1-s1" class="fa-solid fa-chevron-down text-slate-400 transition-transform mt-2 md:mt-0 text-lg md:text-xl self-end md:self-auto"></i>
                     </div>
                     <div id="d1-s1" class="accordion-content border-t border-slate-100 bg-slate-50">
-                        <div class="p-6 md:pl-[14.5rem]">
-                            <ul class="space-y-3 text-slate-700">
+                        <div class="p-4 md:p-6 md:pl-[14.5rem]">
+                            <ul class="space-y-3 text-slate-700 text-sm md:text-base">
                                 <li><i class="fa-solid fa-caret-right text-accent mr-2"></i>1. The Evolution of Poppy Cultivation and Drug Production in Pak-Afghanistan Region</li>
                                 <li><i class="fa-solid fa-caret-right text-accent mr-2"></i>2. From Fields to Global Markets: Drug Trafficking Routes via Pakistan, Afghanistan and Iran</li>
                                 <li><i class="fa-solid fa-caret-right text-accent mr-2"></i>3. Illicit Financial Flows: Money Laundering, Hawala networks and Organised Crime</li>
@@ -403,18 +420,18 @@
                 </div>
 
                 <div class="bg-white border border-slate-200 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                    <div class="flex flex-col md:flex-row md:items-center justify-between p-6 cursor-pointer" onclick="toggleAccordion('d1-s2')">
-                        <div class="flex flex-col md:flex-row md:items-center gap-4">
-                            <div class="flex items-center gap-2 text-accent font-bold text-sm bg-blue-50 px-3 py-1.5 rounded border border-blue-100">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between p-4 md:p-6 cursor-pointer" onclick="toggleAccordion('d1-s2')">
+                        <div class="flex flex-col md:flex-row md:items-center gap-3 md:gap-4">
+                            <div class="flex items-center gap-2 text-accent font-bold text-xs md:text-sm bg-blue-50 px-3 py-1.5 rounded border border-blue-100 self-start md:self-auto">
                                 <i class="fa-regular fa-clock"></i> 5:30 PM - 7:30 PM IST
                             </div>
-                            <h3 class="text-xl font-bold text-oxford">Session 2: The Andean Cocaine Complex: Production, Insurgency and Global Supply</h3>
+                            <h3 class="text-lg md:text-xl font-bold text-oxford">Session 2: The Andean Cocaine Complex: Production, Insurgency and Global Supply</h3>
                         </div>
-                        <i id="icon-d1-s2" class="fa-solid fa-chevron-down text-slate-400 transition-transform mt-4 md:mt-0 text-xl"></i>
+                        <i id="icon-d1-s2" class="fa-solid fa-chevron-down text-slate-400 transition-transform mt-2 md:mt-0 text-lg md:text-xl self-end md:self-auto"></i>
                     </div>
                     <div id="d1-s2" class="accordion-content border-t border-slate-100 bg-slate-50">
-                        <div class="p-6 md:pl-[14.5rem]">
-                            <ul class="space-y-3 text-slate-700">
+                        <div class="p-4 md:p-6 md:pl-[14.5rem]">
+                            <ul class="space-y-3 text-slate-700 text-sm md:text-base">
                                 <li><i class="fa-solid fa-caret-right text-accent mr-2"></i>1. The Historical evolution of Cocaine Production in Andean Region</li>
                                 <li><i class="fa-solid fa-caret-right text-accent mr-2"></i>2. Cartel Structure: Governance, evolving political dynamics and Syndicate</li>
                                 <li><i class="fa-solid fa-caret-right text-accent mr-2"></i>3. From Andes to Global Markets: Trafficking Routes and Transnational Networks</li>
@@ -426,18 +443,18 @@
                 </div>
 
                 <div class="bg-white border border-slate-200 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                    <div class="flex flex-col md:flex-row md:items-center justify-between p-6 cursor-pointer" onclick="toggleAccordion('d1-s3')">
-                        <div class="flex flex-col md:flex-row md:items-center gap-4">
-                            <div class="flex items-center gap-2 text-accent font-bold text-sm bg-blue-50 px-3 py-1.5 rounded border border-blue-100">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between p-4 md:p-6 cursor-pointer" onclick="toggleAccordion('d1-s3')">
+                        <div class="flex flex-col md:flex-row md:items-center gap-3 md:gap-4">
+                            <div class="flex items-center gap-2 text-accent font-bold text-xs md:text-sm bg-blue-50 px-3 py-1.5 rounded border border-blue-100 self-start md:self-auto">
                                 <i class="fa-regular fa-clock"></i> 7:30 PM - 9:30 PM IST
                             </div>
-                            <h3 class="text-xl font-bold text-oxford">Session 3: Mexico: Cartels, Synthetic Drug Revolution and Globalization</h3>
+                            <h3 class="text-lg md:text-xl font-bold text-oxford">Session 3: Mexico: Cartels, Synthetic Drug Revolution and Globalization</h3>
                         </div>
-                        <i id="icon-d1-s3" class="fa-solid fa-chevron-down text-slate-400 transition-transform mt-4 md:mt-0 text-xl"></i>
+                        <i id="icon-d1-s3" class="fa-solid fa-chevron-down text-slate-400 transition-transform mt-2 md:mt-0 text-lg md:text-xl self-end md:self-auto"></i>
                     </div>
                     <div id="d1-s3" class="accordion-content border-t border-slate-100 bg-slate-50">
-                        <div class="p-6 md:pl-[14.5rem]">
-                            <ul class="space-y-3 text-slate-700">
+                        <div class="p-4 md:p-6 md:pl-[14.5rem]">
+                            <ul class="space-y-3 text-slate-700 text-sm md:text-base">
                                 <li><i class="fa-solid fa-caret-right text-accent mr-2"></i>1. The Rise of Synthetic Drugs: Methamphetamine, Fentanyl and the New Economy</li>
                                 <li><i class="fa-solid fa-caret-right text-accent mr-2"></i>2. Cartels in Mexico: Parallel State, Violence and Power Struggle</li>
                                 <li><i class="fa-solid fa-caret-right text-accent mr-2"></i>3. Transnational Criminal Network in Europe, Asia and Beyond</li>
@@ -453,18 +470,18 @@
             <div id="day2-content" class="space-y-4 hidden animate-fade-in">
                 
                 <div class="bg-white border border-slate-200 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                    <div class="flex flex-col md:flex-row md:items-center justify-between p-6 cursor-pointer" onclick="toggleAccordion('d2-s4')">
-                        <div class="flex flex-col md:flex-row md:items-center gap-4">
-                            <div class="flex items-center gap-2 text-accent font-bold text-sm bg-blue-50 px-3 py-1.5 rounded border border-blue-100">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between p-4 md:p-6 cursor-pointer" onclick="toggleAccordion('d2-s4')">
+                        <div class="flex flex-col md:flex-row md:items-center gap-3 md:gap-4">
+                            <div class="flex items-center gap-2 text-accent font-bold text-xs md:text-sm bg-blue-50 px-3 py-1.5 rounded border border-blue-100 self-start md:self-auto">
                                 <i class="fa-regular fa-clock"></i> 1:00 PM - 3:00 PM IST
                             </div>
-                            <h3 class="text-xl font-bold text-oxford">Session 4: The Golden Triangle: Opium, Synthetic Drug Expansion</h3>
+                            <h3 class="text-lg md:text-xl font-bold text-oxford">Session 4: The Golden Triangle: Opium, Synthetic Drug Expansion</h3>
                         </div>
-                        <i id="icon-d2-s4" class="fa-solid fa-chevron-down text-slate-400 transition-transform mt-4 md:mt-0 text-xl"></i>
+                        <i id="icon-d2-s4" class="fa-solid fa-chevron-down text-slate-400 transition-transform mt-2 md:mt-0 text-lg md:text-xl self-end md:self-auto"></i>
                     </div>
                     <div id="d2-s4" class="accordion-content border-t border-slate-100 bg-slate-50">
-                        <div class="p-6 md:pl-[14.5rem]">
-                            <ul class="space-y-3 text-slate-700">
+                        <div class="p-4 md:p-6 md:pl-[14.5rem]">
+                            <ul class="space-y-3 text-slate-700 text-sm md:text-base">
                                 <li><i class="fa-solid fa-caret-right text-accent mr-2"></i>1. Historical evolution of Poppy Cultivation in the Golden Triangle</li>
                                 <li><i class="fa-solid fa-caret-right text-accent mr-2"></i>2. The Emergence of Methamphetamine: Production and Governance</li>
                                 <li><i class="fa-solid fa-caret-right text-accent mr-2"></i>3. The Golden Triangle, Cross Border Trafficking Routes and Networks</li>
@@ -477,18 +494,18 @@
                 </div>
 
                 <div class="bg-white border border-slate-200 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                    <div class="flex flex-col md:flex-row md:items-center justify-between p-6 cursor-pointer" onclick="toggleAccordion('d2-s5')">
-                        <div class="flex flex-col md:flex-row md:items-center gap-4">
-                            <div class="flex items-center gap-2 text-accent font-bold text-sm bg-blue-50 px-3 py-1.5 rounded border border-blue-100">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between p-4 md:p-6 cursor-pointer" onclick="toggleAccordion('d2-s5')">
+                        <div class="flex flex-col md:flex-row md:items-center gap-3 md:gap-4">
+                            <div class="flex items-center gap-2 text-accent font-bold text-xs md:text-sm bg-blue-50 px-3 py-1.5 rounded border border-blue-100 self-start md:self-auto">
                                 <i class="fa-regular fa-clock"></i> 3:00 PM - 5:00 PM IST
                             </div>
-                            <h3 class="text-xl font-bold text-oxford">Session 5: Emerging Narcotics Challenges in India</h3>
+                            <h3 class="text-lg md:text-xl font-bold text-oxford">Session 5: Emerging Narcotics Challenges in India</h3>
                         </div>
-                        <i id="icon-d2-s5" class="fa-solid fa-chevron-down text-slate-400 transition-transform mt-4 md:mt-0 text-xl"></i>
+                        <i id="icon-d2-s5" class="fa-solid fa-chevron-down text-slate-400 transition-transform mt-2 md:mt-0 text-lg md:text-xl self-end md:self-auto"></i>
                     </div>
                     <div id="d2-s5" class="accordion-content border-t border-slate-100 bg-slate-50">
-                        <div class="p-6 md:pl-[14.5rem]">
-                            <ul class="space-y-3 text-slate-700">
+                        <div class="p-4 md:p-6 md:pl-[14.5rem]">
+                            <ul class="space-y-3 text-slate-700 text-sm md:text-base">
                                 <li><i class="fa-solid fa-caret-right text-accent mr-2"></i>1. Illicit Drugs, Borders and insurgency in Punjab and Kashmir</li>
                                 <li><i class="fa-solid fa-caret-right text-accent mr-2"></i>2. Illicit Drugs, Borders and insurgency in northeast</li>
                                 <li><i class="fa-solid fa-caret-right text-accent mr-2"></i>3. Pharma, Precursor Chemicals and Synthetic Drugs in India</li>
@@ -500,18 +517,18 @@
                 </div>
 
                 <div class="bg-white border border-slate-200 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                    <div class="flex flex-col md:flex-row md:items-center justify-between p-6 cursor-pointer" onclick="toggleAccordion('d2-s6')">
-                        <div class="flex flex-col md:flex-row md:items-center gap-4">
-                            <div class="flex items-center gap-2 text-accent font-bold text-sm bg-blue-50 px-3 py-1.5 rounded border border-blue-100">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between p-4 md:p-6 cursor-pointer" onclick="toggleAccordion('d2-s6')">
+                        <div class="flex flex-col md:flex-row md:items-center gap-3 md:gap-4">
+                            <div class="flex items-center gap-2 text-accent font-bold text-xs md:text-sm bg-blue-50 px-3 py-1.5 rounded border border-blue-100 self-start md:self-auto">
                                 <i class="fa-regular fa-clock"></i> 5:30 PM - 7:30 PM IST
                             </div>
-                            <h3 class="text-xl font-bold text-oxford">Session 6: Combating Narcotics Terror - Global Strategies</h3>
+                            <h3 class="text-lg md:text-xl font-bold text-oxford">Session 6: Combating Narcotics Terror - Global Strategies</h3>
                         </div>
-                        <i id="icon-d2-s6" class="fa-solid fa-chevron-down text-slate-400 transition-transform mt-4 md:mt-0 text-xl"></i>
+                        <i id="icon-d2-s6" class="fa-solid fa-chevron-down text-slate-400 transition-transform mt-2 md:mt-0 text-lg md:text-xl self-end md:self-auto"></i>
                     </div>
                     <div id="d2-s6" class="accordion-content border-t border-slate-100 bg-slate-50">
-                        <div class="p-6 md:pl-[14.5rem]">
-                            <ul class="space-y-3 text-slate-700">
+                        <div class="p-4 md:p-6 md:pl-[14.5rem]">
+                            <ul class="space-y-3 text-slate-700 text-sm md:text-base">
                                 <li><i class="fa-solid fa-caret-right text-accent mr-2"></i>1. Strengthening global Anti-Money Laundering Mechanisms</li>
                                 <li><i class="fa-solid fa-caret-right text-accent mr-2"></i>2. Data integration, Intelligence Platforms and Operations</li>
                                 <li><i class="fa-solid fa-caret-right text-accent mr-2"></i>3. Narcotics, civil society and human security: A global Approach</li>
@@ -523,18 +540,18 @@
                 </div>
 
                 <div class="bg-white border border-slate-200 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                    <div class="flex flex-col md:flex-row md:items-center justify-between p-6 cursor-pointer" onclick="toggleAccordion('d2-s7')">
-                        <div class="flex flex-col md:flex-row md:items-center gap-4">
-                            <div class="flex items-center gap-2 text-accent font-bold text-sm bg-blue-50 px-3 py-1.5 rounded border border-blue-100">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between p-4 md:p-6 cursor-pointer" onclick="toggleAccordion('d2-s7')">
+                        <div class="flex flex-col md:flex-row md:items-center gap-3 md:gap-4">
+                            <div class="flex items-center gap-2 text-accent font-bold text-xs md:text-sm bg-blue-50 px-3 py-1.5 rounded border border-blue-100 self-start md:self-auto">
                                 <i class="fa-regular fa-clock"></i> 7:30 PM - 9:30 PM IST
                             </div>
-                            <h3 class="text-xl font-bold text-oxford">Session 7: Global Lessons in Counter-Narcotics: Models of Success</h3>
+                            <h3 class="text-lg md:text-xl font-bold text-oxford">Session 7: Global Lessons in Counter-Narcotics: Models of Success</h3>
                         </div>
-                        <i id="icon-d2-s7" class="fa-solid fa-chevron-down text-slate-400 transition-transform mt-4 md:mt-0 text-xl"></i>
+                        <i id="icon-d2-s7" class="fa-solid fa-chevron-down text-slate-400 transition-transform mt-2 md:mt-0 text-lg md:text-xl self-end md:self-auto"></i>
                     </div>
                     <div id="d2-s7" class="accordion-content border-t border-slate-100 bg-slate-50">
-                        <div class="p-6 md:pl-[14.5rem]">
-                            <ul class="space-y-3 text-slate-700">
+                        <div class="p-4 md:p-6 md:pl-[14.5rem]">
+                            <ul class="space-y-3 text-slate-700 text-sm md:text-base">
                                 <li><i class="fa-solid fa-caret-right text-accent mr-2"></i>1. Lessons from Colombia's Strategy</li>
                                 <li><i class="fa-solid fa-caret-right text-accent mr-2"></i>2. Lessons from India's Strategy</li>
                                 <li><i class="fa-solid fa-caret-right text-accent mr-2"></i>3. Lessons from the US Strategy</li>
@@ -549,16 +566,29 @@
         </div>
     </section>
 
-    <footer class="bg-oxford text-center py-10 text-slate-400 text-sm border-t border-slate-800">
+    <footer class="bg-oxford text-center py-10 px-4 text-slate-400 text-sm border-t border-slate-800">
         <div class="max-w-4xl mx-auto flex flex-col items-center">
-            <img src="Indic Logo.png" alt="Indic Researchers Forum Logo" class="h-12 w-auto mb-4 opacity-75 hover:opacity-100 transition-opacity">
+            <img src="Indic Logo.png" alt="Indic Researchers Forum Logo" class="h-10 md:h-12 w-auto mb-4 opacity-75 hover:opacity-100 transition-opacity">
             <p class="mb-2">© 2026 Indic Researchers Forum & Avellon Intelligence. All rights reserved.</p>
             <p>International Conference on Countering Narco-Terrorism</p>
         </div>
     </footer>
 
     <script>
-        // Tab Switching Logic
+        // --- Mobile Menu Toggle Logic ---
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+                menu.classList.add('flex');
+            } else {
+                menu.classList.add('hidden');
+                menu.classList.remove('flex');
+            }
+        }
+        document.getElementById('mobile-menu-btn').addEventListener('click', toggleMobileMenu);
+
+        // --- Tab Switching Logic ---
         function switchTab(day) {
             const day1Btn = document.getElementById('btn-day1');
             const day2Btn = document.getElementById('btn-day2');
@@ -586,7 +616,7 @@
             }
         }
 
-        // Accordion Logic
+        // --- Accordion Logic ---
         function toggleAccordion(id) {
             const content = document.getElementById(id);
             const icon = document.getElementById('icon-' + id);
