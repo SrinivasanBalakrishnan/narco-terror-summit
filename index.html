@@ -32,12 +32,30 @@
         .nav-scrolled { background-color: rgba(10, 25, 47, 0.95); backdrop-filter: blur(10px); }
         
         /* Auto-Scrolling Marquee CSS for Panelists */
+        /* Auto-Scrolling Marquee CSS with Manual Scrollbar */
         .marquee-container {
             display: flex;
-            overflow: hidden;
+            overflow-x: auto;
             user-select: none;
             gap: 2rem;
-            padding: 1rem 0;
+            padding: 1rem 0 2rem 0; /* Extra padding for the scrollbar */
+            scroll-behavior: smooth;
+        }
+        
+        /* Custom Scrollbar Styling */
+        .marquee-container::-webkit-scrollbar {
+            height: 8px;
+        }
+        .marquee-container::-webkit-scrollbar-track {
+            background: #f1f5f9;
+            border-radius: 4px;
+        }
+        .marquee-container::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+        .marquee-container::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
         }
         .marquee-content {
             display: flex;
