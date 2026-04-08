@@ -61,15 +61,7 @@
             display: flex;
             flex-shrink: 0;
             gap: 2rem;
-            animation: scroll-left 75s linear infinite;
-        }
-        /* Pauses the scroll when user hovers over a speaker */
-        .marquee-container:hover .marquee-content {
-            animation-play-state: paused;
-        }
-        @keyframes scroll-left {
-            from { transform: translateX(0); }
-            to { transform: translateX(calc(-100% - 2rem)); }
+            /* Auto-scroll is now handled by JavaScript below */
         }
     </style>
 </head>
@@ -915,6 +907,39 @@ He has received the DEA’s coveted Administrator’s Award and, in 2007, was ho
                 icon.classList.add('rotate-180', 'text-accent');
             }
         }
+        // --- Seamless Infinite Scroll Engine (For Manual Scrollbar Fix) ---
+        const marqueeContainer = document.querySelector('.marquee-container');
+        const marqueeTrack1 = document.querySelector('.marquee-content');
+        
+        let isPaused = false;
+        let scrollSpeed = 0.5; // Adjust this number to make auto-scroll faster or slower
+
+        // Pause auto-scroll when user hovers or touches the container
+        marqueeContainer.addEventListener('mouseenter', () => isPaused = true);
+        marqueeContainer.addEventListener('mouseleave', () => isPaused = false);
+        marqueeContainer.addEventListener('touchstart', () => isPaused = true);
+        marqueeContainer.addEventListener('touchend', () => isPaused = false);
+
+        function animateMarquee() {
+            if (!isPaused) {
+                // Move the scrollbar physically
+                marqueeContainer.scrollLeft += scrollSpeed;
+            }
+            
+            // Dynamically calculate the exact loop point (Width of Track 1 + Gap)
+            const gap = parseFloat(getComputedStyle(marqueeContainer).gap) || 32;
+            const loopPoint = marqueeTrack1.scrollWidth + gap;
+            
+            // Seamlessly reset the physical scroll position when reaching the end of Track 1
+            if (marqueeContainer.scrollLeft >= loopPoint) {
+                marqueeContainer.scrollLeft -= loopPoint;
+            }
+            
+            requestAnimationFrame(animateMarquee);
+        }
+
+        // Start the engine
+        animateMarquee();
     </script>
 </body>
 </html>
